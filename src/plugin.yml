@@ -1,0 +1,30 @@
+name: Haupt
+version: 1.0
+author: NichtZurMitte
+main: de.stan.haupt.main.Main
+
+commands:
+   Clear:
+      description: leert dein Inventar
+      aliases: [cl]
+   inv:
+      description: Speichere und lade dein Inventar!
+   party:
+      description: Starte eine Party!
+   setspawn:
+      description: setze den Worldspawn!
+   spawn:
+      description: teleportiere dich zum Spawn!
+   info:
+      description: Zeigt dir Server Informationen an!
+      aliases: [i]
+      ussage: </command>
+   cc:
+      description: Leert den Chat
+      ussage: </command>
+   mute:
+      description: Mutet einen Spierler!
+      ussage: </command>
+   gm:
+      description: Setze deinen Gamemode
+      ussage: </command>
