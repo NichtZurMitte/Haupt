@@ -16,7 +16,7 @@ public class Gm implements CommandExecutor {
 		}
 		Player p = (Player) sender;
 		if(!(p.hasPermission("haupt.gm"))) {
-			p.sendMessage("§cDazu hast du keine Rechte!");
+			p.sendMessage("Â§cDazu hast du keine Rechte!");
 			return true;
 		}
 		if(args.length == 1 && args[0].equalsIgnoreCase("0")) {
@@ -32,7 +32,26 @@ public class Gm implements CommandExecutor {
 			p.setGameMode(GameMode.SPECTATOR);
 			return true;
 		}else 
-			p.sendMessage("§cBitte benutze §6/gm <0|1|2|3> §c!");
+			p.sendMessage("Â§cBitte benutze Â§6/gm <0|1|2|3> Â§c!");
+		
+		
+		if (args.length == 2 && args[1] instanceof Player) {
+			Player t = args[1];
+			if(args.length == 1 && args[0].equalsIgnoreCase("0")) {
+				t.setGameMode(GameMode.SURVIVAL);
+				return true;
+			}else if(args[0].equalsIgnoreCase("1")) {
+				t.setGameMode(GameMode.CREATIVE);
+				return true;
+			}else if(args[0].equalsIgnoreCase("2")) {
+				t.setGameMode(GameMode.ADVENTURE);
+				return true;
+			}else if(args[0].equalsIgnoreCase("3")) {
+				t.setGameMode(GameMode.SPECTATOR);
+				return true;
+			}else
+				t.sendMessage("ï¿½cBitte benutze ï¿½6/gm <0|1|2|3> <Player>ï¿½c!");
+		}
 
 		
 		return false;
